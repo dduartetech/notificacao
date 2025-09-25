@@ -1,0 +1,31 @@
+spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username:
+    password:
+    protocol: smtp
+    properties:
+      mail:
+        smtp:
+          socketFactory:
+            port: 465
+            class: javax.net.ssl.SSLSocketFactory
+            fallback: false
+          auth: true
+          starttls:
+            enable: true
+          connectionmtimeout: 5000
+          timeout: 300
+          writetimeout: 5000
+
+  thymeleaf:
+    enable: true
+
+envio:
+  email:
+    remetente: 'nedko014@gmail.com'
+    nomeRemetente: 'Diego Duarte'
+
+server:
+  port: 8082
